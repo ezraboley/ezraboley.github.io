@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+import {AboutMeContainer} from "./AboutMe";
 
 export class PageContainer extends Component {
     render() {
@@ -14,9 +15,7 @@ class Page extends Component {
     render() {
         return (
             <div>
-                <p>
-                    Hey there!
-                </p>
+                <AboutMeContainer/>
             </div>
         );
     }

@@ -1,12 +1,14 @@
+.Nav-Bar-Container {
+  position: sticky;
+  top: 0;
+  width: 100%;
+}
+
 .Nav-Bar {
+  text-align: center;
   font: 100% Courier, monospace;
   background-color: rgba(11, 36, 61, 0.87);
   padding: 10px;
-}
-.Nav-Bar .Nav-Bar-Container {
-  position: fixed;
-  top: 0;
-  width: 100%;
 }
 .Nav-Bar button {
   background-color: #3190f2;
