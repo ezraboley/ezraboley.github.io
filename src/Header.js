@@ -1,12 +1,12 @@
 import React, {Component} from "react";
-import './style/Header.css';
+import './style/CSS/Header.css';
 
 export class HeaderContainer extends Component {
 
 
     render() {
         return (
-          <div>
+          <div className={"Nav-Bar Nav-Bar-Container"}>
               <Title />
               <NavBar/>
           </div>
@@ -17,7 +17,7 @@ export class HeaderContainer extends Component {
 class Title extends Component {
     render() {
         return (
-            <h1>
+            <h1 className={"Nav-Bar-Title"}>
                 {"Everything Ezra"}
             </h1>
         )
@@ -27,7 +27,7 @@ class Title extends Component {
 class NavBar extends Component {
 
     render () {
-        const buttonList = ["Home", "Experience", "Course Work", "About Me"];
+        const buttonList = ["Home", "Experience", "Course Work", "$man Ezra"];
         const navButtons = buttonList.map((button) =>
             <NavBarButton text={button}/>
         );

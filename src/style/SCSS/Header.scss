@@ -1,0 +1,32 @@
+$font-stack: Courier, monospace;
+$button-color: #3190f2;
+$button-color-hover: #2a84d8;
+
+
+.Nav-Bar {
+  font: 100% $font-stack;
+  background-color: rgba(11, 36, 61, 0.87);
+  padding: 10px;
+  .Nav-Bar-Container {
+    position: fixed;
+    top: 0;
+    width:100%;
+  }
+  button {
+    background-color: $button-color;
+    font: inherit;
+    border: 0px;
+    margin-right: 2.5px;
+    margin-left: 2.5px;
+    height: 2em;
+  }
+  button:hover {
+    background-color: $button-color-hover;
+  }
+  h1 {
+    font-size: 3em;
+    margin-top: 0;
+    color: $button-color;
+    margin-bottom: 10px;
+  }
+}

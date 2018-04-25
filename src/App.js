@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import {HeaderContainer} from "./Header";
+import {PageContainer} from "./PageManager";
 import './App.css';
 
 class App extends Component {
@@ -8,9 +9,7 @@ class App extends Component {
     return (
       <div className="App">
         <HeaderContainer/>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <PageContainer/>
       </div>
     );
   }
