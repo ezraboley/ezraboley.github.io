@@ -17,7 +17,7 @@ class AboutMe extends Component {
         return (
             <div className={"About-Me"}>
                 <Card type={"text"} title={"About Me"} content={info.about}/>
-                <Card type={"pic"} src={ "./me.jpg"} title={"Chaco Canyon, NM"}/>
+                <Card type={"pic"} src={ "./me.jpg"} title={"Ezra Boley"}/>
             </div>
         );
     }
