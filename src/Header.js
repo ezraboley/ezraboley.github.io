@@ -1,13 +1,13 @@
 import React, {Component} from "react";
 import './style/CSS/Header.css';
-
+import {Link} from "react-router-dom";
 export class HeaderContainer extends Component {
 
     render() {
         return (
           <div className={"Nav-Bar Nav-Bar-Container"}>
               <Title />
-              <NavBar onclick={this.props.onclick}/>
+              <NavBar />
           </div>
         );
     }
@@ -27,10 +27,11 @@ class NavBar extends Component {
 
     render () {
         const buttonList = ["Home", "Experience", "Course Work", "$man Ezra"];
+        const links = ["/", "/experience", "/coursework", "/about"];
         let count = 0;
         return (
             <div className={"Nav-Bar"}>
-                {buttonList.map((content) => <NavBarButton onclick={this.props.onclick} id={"nav_"+count} key={"nav_" + count++} text={content}/>)}
+                {buttonList.map((content, index) => <NavBarButton link={links[index]} id={"nav_"+count} key={"nav_" + count++} text={content}/>)}
             </div>
         );
     }
@@ -40,9 +41,11 @@ class NavBarButton extends Component {
 
     render() {
         return (
-            <button id={this.props.id} onClick={this.props.onclick} className={"Nav-Bar-Button"}>
+            <Link to={this.props.link}>
+                <button id={this.props.id} className={"Nav-Bar-Button"}>
                 {this.props.text}
-            </button>
+                </button>
+            </Link>
         );
     }
 }

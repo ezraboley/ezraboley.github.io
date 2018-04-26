@@ -1,7 +1,12 @@
 import React, { Component } from 'react';
+import {
+    BrowserRouter as Router,
+    Route,
+    Link
+} from 'react-router-dom';
 import {HeaderContainer} from "./Header";
 import {PageContainer} from "./PageManager";
-import './App.css';
+import './style/CSS/App.css';
 import {HomeContainer} from "./Home";
 import {AboutMeContainer} from "./AboutMe";
 import {CourseworkContainer} from "./Coursework";
@@ -17,8 +22,8 @@ class App extends Component {
     }
     switchPage(e){
         let pages = {
-            nav_0: <HomeContainer/>,
-            nav_1: <ExperienceContainer />,
+            nav_0: <Link to="/"/>,
+            nav_1: <Link to="/experience"/>,
             nav_2:  <CourseworkContainer />,
             nav_3: <AboutMeContainer/>,
         };
@@ -27,10 +32,16 @@ class App extends Component {
     }
   render() {
     return (
-      <div>
-        <HeaderContainer onclick={this.switchPage}/>
-        <PageContainer currentPage={this.state.currentPage}/>
-      </div>
+        <Router>
+          <div>
+              <HeaderContainer/>
+              <PageContainer/>
+              <Route exact path="/" component={HomeContainer}/>
+              <Route path="/about" component={AboutMeContainer}/>
+              <Route path="/coursework" component={CourseworkContainer}/>
+              <Route path="/experience" component={ExperienceContainer}/>
+          </div>
+        </Router>
     );
   }
 }
