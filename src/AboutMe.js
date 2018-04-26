@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import {Card} from "./Card";
 import {info} from "./about";
-
+import "./style/CSS/AboutMe.css";
 export class AboutMeContainer extends Component {
     render() {
         return (

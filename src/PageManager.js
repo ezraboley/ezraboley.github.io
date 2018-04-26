@@ -1,21 +1,26 @@
 import React, {Component} from "react";
-import {AboutMeContainer} from "./AboutMe";
+
 
 export class PageContainer extends Component {
     render() {
         return (
           <div>
-              <Page />
+              <Page currentPage={this.props.currentPage}/>
           </div>
         );
     }
 }
 
 class Page extends Component {
+    constructor(props) {
+        super(props);
+    }
+
+
     render() {
         return (
             <div>
-                <AboutMeContainer/>
+                {this.props.currentPage}
             </div>
         );
     }

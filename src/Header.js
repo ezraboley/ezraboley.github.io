@@ -3,12 +3,11 @@ import './style/CSS/Header.css';
 
 export class HeaderContainer extends Component {
 
-
     render() {
         return (
           <div className={"Nav-Bar Nav-Bar-Container"}>
               <Title />
-              <NavBar/>
+              <NavBar onclick={this.props.onclick}/>
           </div>
         );
     }
@@ -28,12 +27,10 @@ class NavBar extends Component {
 
     render () {
         const buttonList = ["Home", "Experience", "Course Work", "$man Ezra"];
-        const navButtons = buttonList.map((button) =>
-            <NavBarButton text={button}/>
-        );
+        let count = 0;
         return (
             <div className={"Nav-Bar"}>
-                {buttonList.map((content) => <NavBarButton text={content}/>)}
+                {buttonList.map((content) => <NavBarButton onclick={this.props.onclick} id={"nav_"+count} key={"nav_" + count++} text={content}/>)}
             </div>
         );
     }
@@ -43,7 +40,7 @@ class NavBarButton extends Component {
 
     render() {
         return (
-            <button className={"Nav-Bar-Button"}>
+            <button id={this.props.id} onClick={this.props.onclick} className={"Nav-Bar-Button"}>
                 {this.props.text}
             </button>
         );
