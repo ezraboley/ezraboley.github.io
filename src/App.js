@@ -7,16 +7,16 @@ import {
 import {HeaderContainer} from "./Header";
 import {PageContainer} from "./PageManager";
 import './style/CSS/App.css';
-import {HomeContainer} from "./Home";
-import {AboutMeContainer} from "./AboutMe";
-import {CourseworkContainer} from "./Coursework";
-import {ExperienceContainer} from "./Experience";
+import {HomeContainer as Home} from "./MainPages/Home";
+import {AboutMeContainer as AboutMe} from "./MainPages/AboutMe";
+import {CourseworkContainer as Coursework} from "./MainPages/Coursework";
+import {ExperienceContainer as Experience} from "./MainPages/Experience";
 
 class App extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            currentPage: <HomeContainer />
+            currentPage: <Home />
         };
         this.switchPage = this.switchPage.bind(this);
     }
@@ -24,8 +24,8 @@ class App extends Component {
         let pages = {
             nav_0: <Link to="/"/>,
             nav_1: <Link to="/experience"/>,
-            nav_2:  <CourseworkContainer />,
-            nav_3: <AboutMeContainer/>,
+            nav_2:  <Coursework />,
+            nav_3: <AboutMe/>,
         };
         let newPage = e.target.getAttribute("id");
         this.setState({currentPage: pages[newPage]});
@@ -36,10 +36,10 @@ class App extends Component {
           <div>
               <HeaderContainer/>
               <PageContainer/>
-              <Route exact path="/" component={HomeContainer}/>
-              <Route path="/about" component={AboutMeContainer}/>
-              <Route path="/coursework" component={CourseworkContainer}/>
-              <Route path="/experience" component={ExperienceContainer}/>
+              <Route exact path="/" component={Home}/>
+              <Route path="/about" component={AboutMe}/>
+              <Route path="/coursework" component={Coursework}/>
+              <Route path="/experience" component={Experience}/>
           </div>
         </Router>
     );

@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+import {Card} from "../Card";
 
 export class HomeContainer extends Component {
     render() {
@@ -14,9 +15,7 @@ class Home extends Component {
     render() {
         return (
           <div>
-              <h1>
-                  {"Hello World"}
-              </h1>
+              <Card title={"Welcome"} type={"text"} content={"Under Construction"}/>
           </div>
         );
     }

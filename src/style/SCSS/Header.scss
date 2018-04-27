@@ -2,17 +2,13 @@ $font-stack: Courier, monospace;
 $button-color: #3190f2;
 $button-color-hover: #2a84d8;
 
-.fa {
-  text-align: center;
-  text-decoration: none;
-  font-size: 120%;
-}
-
-.fa-linkedin {
-  background: $button-color;
-}
-
 .Nav-Bar-Container {
+  position: sticky;
+  top: 0;
+  width:100%;
+}
+
+.Nav-Bar-Scroll {
   position: sticky;
   top: 0;
   width:100%;
@@ -25,7 +21,9 @@ $button-color-hover: #2a84d8;
   padding: 10px;
 
   button {
-    background-color: $button-color;
+    background-color: rgba(255, 255, 255, 0);
+    color: $button-color;
+    enable-background: none;
     cursor: pointer;
     transition: 0.3s;
     font: inherit;
@@ -41,7 +39,8 @@ $button-color-hover: #2a84d8;
     line-height: 100%;
   }
   button:hover {
-    background-color: $button-color-hover;
+    background: rgba(49, 144, 242, 0.17);
+
   }
   h1 {
     text-align: center;
@@ -49,5 +48,22 @@ $button-color-hover: #2a84d8;
     margin-top: 0;
     color: $button-color;
     margin-bottom: 10px;
+    text-decoration: none;
   }
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:active {
+  text-decoration: none;
 }

@@ -6,7 +6,7 @@ export class HeaderContainer extends Component {
     render() {
         return (
           <div className={"Nav-Bar Nav-Bar-Container"}>
-              <Title />
+              <Title title="Everything Ezra"/>
               <NavBar />
           </div>
         );
@@ -16,17 +16,18 @@ export class HeaderContainer extends Component {
 class Title extends Component {
     render() {
         return (
-            <h1 className={"Nav-Bar-Title"}>
-                {"Everything Ezra"}
-            </h1>
+            <Link to={"/"}>
+                <h1 className={"Nav-Bar-Title"}>
+                    {this.props.title}
+                </h1>
+            </Link>
         )
     }
 }
 
 class NavBar extends Component {
-
     render () {
-        const buttonList = ["Home", "Experience", "Course Work", "$man Ezra"];
+        const buttonList = ["Home", "Experience", "Coursework", "$man Ezra"];
         const links = ["/", "/experience", "/coursework", "/about"];
         let count = 0;
         return (

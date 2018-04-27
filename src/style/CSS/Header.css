@@ -1,14 +1,10 @@
-.fa {
-  text-align: center;
-  text-decoration: none;
-  font-size: 120%;
-}
-
-.fa-linkedin {
-  background: #3190f2;
-}
-
 .Nav-Bar-Container {
+  position: sticky;
+  top: 0;
+  width: 100%;
+}
+
+.Nav-Bar-Scroll {
   position: sticky;
   top: 0;
   width: 100%;
@@ -21,7 +17,9 @@
   padding: 10px;
 }
 .Nav-Bar button {
-  background-color: #3190f2;
+  background-color: rgba(255, 255, 255, 0);
+  color: #3190f2;
+  enable-background: none;
   cursor: pointer;
   transition: 0.3s;
   font: inherit;
@@ -36,7 +34,7 @@
   line-height: 100%;
 }
 .Nav-Bar button:hover {
-  background-color: #2a84d8;
+  background: rgba(49, 144, 242, 0.17);
 }
 .Nav-Bar h1 {
   text-align: center;
@@ -44,4 +42,21 @@
   margin-top: 0;
   color: #3190f2;
   margin-bottom: 10px;
+  text-decoration: none;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:active {
+  text-decoration: none;
 }
