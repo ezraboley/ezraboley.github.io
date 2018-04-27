@@ -27,8 +27,8 @@ class Title extends Component {
 
 class NavBar extends Component {
     render () {
-        const buttonList = ["Home", "Experience", "Coursework", "$man Ezra"];
-        const links = ["/", "/experience", "/coursework", "/about"];
+        const buttonList = ["Home", "Experience", "Coursework", "Knick-Knacks", "$man Ezra"];
+        const links = ["/", "/experience", "/coursework", "/fun", "/about"];
         let count = 0;
         return (
             <div className={"Nav-Bar"}>

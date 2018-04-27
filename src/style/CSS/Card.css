@@ -1,10 +1,10 @@
 .card {
-  display: inline-block;
+  height: fit-content;
   background: #ededed;
   border: 0px dimgray solid;
   border-radius: 0px;
   margin: 15px;
-  width: 35%;
+  width: fit-content;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
 }
@@ -19,10 +19,30 @@
 .text {
   flex-grow: 2;
   padding: 5px;
+  width: auto;
 }
 .text p {
   padding: inherit;
 }
 .text h2 {
   padding: inherit;
+}
+
+.link {
+  width: 50%;
+}
+.link h2 {
+  position: absolute;
+  color: #ededed;
+  font-size: 4em;
+  width: 50%;
+  text-align: center;
+}
+
+.link:hover {
+  opacity: 0.4;
+}
+
+.pic {
+  flex-grow: 1;
 }

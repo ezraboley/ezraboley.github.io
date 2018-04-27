@@ -11,6 +11,7 @@ import {HomeContainer as Home} from "./MainPages/Home";
 import {AboutMeContainer as AboutMe} from "./MainPages/AboutMe";
 import {CourseworkContainer as Coursework} from "./MainPages/Coursework";
 import {ExperienceContainer as Experience} from "./MainPages/Experience";
+import {FunContainer as Fun} from "./MainPages/Fun";
 
 class App extends Component {
     constructor(props) {
@@ -38,6 +39,7 @@ class App extends Component {
               <PageContainer/>
               <Route exact path="/" component={Home}/>
               <Route path="/about" component={AboutMe}/>
+              <Route path="/fun" component={Fun}/>
               <Route path="/coursework" component={Coursework}/>
               <Route path="/experience" component={Experience}/>
           </div>
