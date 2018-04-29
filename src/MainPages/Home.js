@@ -27,11 +27,13 @@ class SiteMap extends Component {
     render() {
         return (
             <div className={"box"}>
-                <div className={"col"}>
-                    <Card  title={"Experience"} type={"link"} content="/experience" bg={"./experience.PNG"}/>
+                <div className={"row"}>
+                    <Card  title={"Experience"}   type={"link"} content="/experience" />
+                    <Card  title={"Coursework"}   type={"link"} content="/coursework" />
                 </div>
-                <div className={"col"}>
-                    <Card  title={"Coursework"} type={"link"} content="/coursework" bg={"./me.jpg"} />
+                <div className={"row"}>
+                    <Card  title={"Knick-Knacks"} type={"link"} content="/fun"        />
+                    <Card  title={"About Me"}     type={"link"} content="/about"      />
                 </div>
             </div>
         )

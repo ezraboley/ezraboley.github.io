@@ -1,3 +1,67 @@
+.Nav-Bar-Container {
+  position: sticky;
+  top: 0;
+  width: 100%;
+}
+
+.Nav-Bar-Scroll {
+  position: sticky;
+  top: 0;
+  width: 100%;
+}
+
+.Nav-Bar {
+  z-index: 999;
+  box-sizing: border-box;
+  font: 100% Courier, monospace;
+  background-color: rgba(11, 36, 61, 0.87);
+  padding: 10px;
+}
+.Nav-Bar button {
+  background-color: rgba(255, 255, 255, 0);
+  color: #3190f2;
+  enable-background: none;
+  cursor: pointer;
+  transition: 0.3s;
+  font: inherit;
+  border: 0;
+  margin-right: 2.5px;
+  margin-left: 2.5px;
+  height: 2em;
+}
+.Nav-Bar .nav-button {
+  display: block;
+  width: 100%;
+  line-height: 100%;
+}
+.Nav-Bar button:hover {
+  background: rgba(49, 144, 242, 0.17);
+}
+.Nav-Bar h1 {
+  text-align: center;
+  font-size: 3em;
+  margin-top: 0;
+  color: #3190f2;
+  margin-bottom: 10px;
+  text-decoration: none;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:active {
+  text-decoration: none;
+}
+
 .card {
   height: fit-content;
   background: #ededed;
@@ -29,14 +93,18 @@
 }
 
 .link {
+  position: relative;
+  text-align: center;
   width: 50%;
+  height: 15em;
+  background: #3190f2;
 }
 .link h2 {
   position: absolute;
   color: #ededed;
-  font-size: 4em;
-  width: 50%;
-  text-align: center;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -50%);
 }
 
 .link:hover {
@@ -45,4 +113,11 @@
 
 .pic {
   flex-grow: 1;
+}
+
+.link-btn {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0%;
 }

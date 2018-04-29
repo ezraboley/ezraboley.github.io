@@ -11,6 +11,7 @@
 }
 
 .Nav-Bar {
+  z-index: 999;
   box-sizing: border-box;
   font: 100% Courier, monospace;
   background-color: rgba(11, 36, 61, 0.87);

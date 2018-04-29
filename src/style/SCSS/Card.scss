@@ -1,3 +1,5 @@
+@import "Header";
+
 
 .card {
   height: fit-content;
@@ -30,13 +32,17 @@
 }
 
 .link {
+  position: relative;
+  text-align: center;
   width: 50%;
-  h2 {
+  height: 15em;
+  background: $button-color;
+    h2 {
     position: absolute;
     color: #ededed;
-    font-size: 4em;
-    width: 50%;
-    text-align: center;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
   }
 }
 
@@ -47,4 +53,11 @@
 
 .pic {
   flex-grow: 1;
+}
+
+.link-btn {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0%;
 }
