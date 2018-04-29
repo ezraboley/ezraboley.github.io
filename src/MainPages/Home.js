@@ -17,6 +17,7 @@ class Home extends Component {
         return (
           <div>
               <Card title={"Welcome"} type={"text"} content={"Under Construction"}/>
+              <SiteMap />
           </div>
         );
     }
@@ -26,8 +27,12 @@ class SiteMap extends Component {
     render() {
         return (
             <div className={"box"}>
-                <Card title={"Experience"} type={"link"} content="/experience" bg={"./experience.PNG"}/>
-                <Card title={"Coursework"} type={"link"} content="/coursework" bg={"./me.jpg"} />
+                <div className={"col"}>
+                    <Card  title={"Experience"} type={"link"} content="/experience" bg={"./experience.PNG"}/>
+                </div>
+                <div className={"col"}>
+                    <Card  title={"Coursework"} type={"link"} content="/coursework" bg={"./me.jpg"} />
+                </div>
             </div>
         )
     }
