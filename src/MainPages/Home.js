@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import {Card} from "../Card";
 import "../style/CSS/Home.css";
+import {info} from "../about";
 
 export class HomeContainer extends Component {
     render() {
@@ -13,10 +14,26 @@ export class HomeContainer extends Component {
 }
 
 class Home extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {title: ""};
+        this.typeWriter("Welcome to my website, glad you could make it.");
+    }
+    typeWriter(word) {
+        let currentIndex = 0;
+        const typer = setInterval( () => {
+            if (this.state.title === word) clearInterval(typer);
+            else {
+                console.log(currentIndex);
+                this.setState({title: (this.state.title + word.charAt(currentIndex++))});
+            }
+        }, 75);
+    }
+
     render() {
         return (
           <div>
-              <Card title={"Welcome"} type={"text"} content={"Under Construction"}/>
+              <Card title={this.state.title} type={"text"} content={info.homepage}/>
               <SiteMap />
           </div>
         );
@@ -28,12 +45,12 @@ class SiteMap extends Component {
         return (
             <div className={"box"}>
                 <div className={"row"}>
-                    <Card  title={"Experience"}   type={"link"} content="/experience" />
-                    <Card  title={"Coursework"}   type={"link"} content="/coursework" />
+                    <Card  title={"What I've Worked On"}   type={"link"} content="/experience" />
+                    <Card  title={"What I've Learned"}   type={"link"} content="/coursework" />
                 </div>
                 <div className={"row"}>
-                    <Card  title={"Knick-Knacks"} type={"link"} content="/fun"        />
-                    <Card  title={"About Me"}     type={"link"} content="/about"      />
+                    <Card  title={"What I Do For Fun"} type={"link"} content="/fun"        />
+                    <Card  title={"Who I Am"}     type={"link"} content="/about"      />
                 </div>
             </div>
         )

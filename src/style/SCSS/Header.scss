@@ -2,16 +2,22 @@ $font-stack: Courier, monospace;
 $button-color: #3190f2;
 $button-color-hover: #2a84d8;
 
+#mini-nav {
+  //For future
+}
+
 .Nav-Bar-Container {
   position: sticky;
   top: 0;
   width:100%;
 }
 
+//for the future
 .Nav-Bar-Scroll {
-  position: sticky;
+  position: fixed;
   top: 0;
   width:100%;
+  left: 0;
 }
 
 .Nav-Bar {
@@ -51,6 +57,11 @@ $button-color-hover: #2a84d8;
     margin-bottom: 10px;
     text-decoration: none;
   }
+}
+
+.active {
+  background: rgba(49, 144, 242, 0.17) !important;
+  display: inline-block;
 }
 
 a:link {

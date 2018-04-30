@@ -5,9 +5,10 @@
 }
 
 .Nav-Bar-Scroll {
-  position: sticky;
+  position: fixed;
   top: 0;
   width: 100%;
+  left: 0;
 }
 
 .Nav-Bar {
@@ -44,6 +45,11 @@
   color: #3190f2;
   margin-bottom: 10px;
   text-decoration: none;
+}
+
+.active {
+  background: rgba(49, 144, 242, 0.17) !important;
+  display: inline-block;
 }
 
 a:link {

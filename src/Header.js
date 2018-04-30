@@ -1,13 +1,13 @@
 import React, {Component} from "react";
 import './style/CSS/Header.css';
-import {Link} from "react-router-dom";
-export class HeaderContainer extends Component {
+import {Link, NavLink} from "react-router-dom";
 
+export class HeaderContainer extends Component {
     render() {
         return (
           <div className={"Nav-Bar Nav-Bar-Container"}>
               <Title title="Everything Ezra"/>
-              <NavBar />
+              <NavBar/>
           </div>
         );
     }
@@ -31,7 +31,7 @@ class NavBar extends Component {
         const links = ["/", "/experience", "/coursework", "/fun", "/about"];
         let count = 0;
         return (
-            <div className={"Nav-Bar"}>
+            <div className={"Nav-Bar mini-nav"}>
                 {buttonList.map((content, index) => <NavBarButton link={links[index]} id={"nav_"+count} key={"nav_" + count++} text={content}/>)}
             </div>
         );
@@ -39,14 +39,15 @@ class NavBar extends Component {
 }
 
 class NavBarButton extends Component {
-
     render() {
+        let classname = "Nav-Bar-Button";
         return (
-            <Link to={this.props.link}>
-                <button id={this.props.id} className={"Nav-Bar-Button"}>
+            <NavLink exact to={this.props.link} activeClassName={" active"}>
+                <button id={this.props.id} className={classname}>
                 {this.props.text}
                 </button>
-            </Link>
+            </NavLink>
         );
     }
 }
+

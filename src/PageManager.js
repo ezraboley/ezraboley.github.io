@@ -5,7 +5,7 @@ export class PageContainer extends Component {
     render() {
         return (
           <div>
-              <Page currentPage={this.props.currentPage}/>
+              <Page className={this.props.className} currentPage={this.props.currentPage}/>
           </div>
         );
     }
@@ -16,10 +16,9 @@ class Page extends Component {
         super(props);
     }
 
-
     render() {
         return (
-            <div>
+            <div className={this.props.className}>
                 {this.props.currentPage}
             </div>
         );
